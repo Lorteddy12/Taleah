@@ -254,7 +254,6 @@ background-color: #6297D4;
   color: #C90000;
   padding-left: 450px;
   margin-left: 0;
-  
 }
 
 h3 {
@@ -359,7 +358,7 @@ color: white;
 }
 
 #take-home {
-  color: green;;
+  color: green;
 }
 
 #progress-2 {
@@ -376,6 +375,10 @@ background-color: var(--primary);
 
 #monthly-budget {
   display: flex;
-
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 4rem;
 }
+
+
 
