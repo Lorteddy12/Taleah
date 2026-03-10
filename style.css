@@ -20,11 +20,13 @@
     --budget:#1a2f5a;
     --background:#ffffff;
     --current-page: #6297D4;
+    --budget-input: #B3CDEB;
   }
   body {
     background: var(--background); 
     color: #333;
     line-height: 1.6;
+    overflow-x: hidden;
   }
   
   #Logo img {
@@ -83,7 +85,7 @@ nav>div >a {
   main {
     display:flex;
     flex-direction:column;
-    max-width: 1200px;
+    max-width: 800px;
     margin: 3rem auto;
     padding-top: 10vh;
     padding: 0 2rem;
@@ -104,10 +106,12 @@ nav>div >a {
 
   .page3 {
     text-decoration: none;
+    color: black;
   }
 
   .page4 {
     text-decoration: none;
+    color: black;
   }
 
   h1 {
@@ -255,7 +259,15 @@ background-color: #6297D4;
   margin-bottom:30px;
   margin-left: 00px;
   border-radius: 20px;
-  height: 450px;
+  
+  height: 50vh;
+}
+
+
+#container {
+  display: flex;
+
+  overflow-x: hidden;
 }
 
 .red-text {
@@ -285,13 +297,8 @@ font-size: 32px;
   justify-content: space-around;
   background-color: var(--current-page);
   border-radius: 20px;
-  height: 30vh;
+  height: 15vh;
   width: 70vw;
-  flex-wrap: nowrap;
-}
-
-#container {
-display: 20px;
 }
 
 .calc-header {
@@ -300,16 +307,11 @@ display: 20px;
 }
 
 .money-number {
-  display: flex;
-  justify-content: space-between;
+display: flex;
+justify-content: space-between;
 }
 
-.explanations {
-  display: flex;
-  justify-content: space-between;
-  font-size: 20px;
-  font-weight: 200; 
-}
+
 
 .page1 {
   display: flex;
@@ -343,6 +345,26 @@ background-color: var(--current-page)
 
 .tax-num {
   padding-bottom: 1;
+}
+
+#tax-calc {
+display: flex;
+flex-direction: column;
+}
+.calc-header {
+  display: flex;
+
+}
+
+.money-number {
+  display: flex;
+  justify-content: space-around;
+}
+
+.explanations {
+  display: flex;
+  justify-content: flex-start;
+  color: white;
 }
 
 .monthly-budget-header {
@@ -380,10 +402,42 @@ background-color: var(--primary);
 
 #monthly-budget {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 4rem;
+  flex-direction: row;
+  justify-content: space-evenly;
+
 }
 
+.budget-input {
+  
+  background-color: var(--budget-input);
+  border: var(--budget-input);
+  border-radius: 15px;
+  width: 22vw;
+  height: 6vh;
+  
+}
 
+.budget-input::placeholder {
+  font-family: "Inria Serif", serif;
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: left;
+  padding: 1;
+  color: black;
+}
 
+#payment-1 {
+
+}
+
+#payment-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#summary {
+  display: flex;
+  flex-direction: column;
+
+}
