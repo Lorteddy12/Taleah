@@ -34,17 +34,23 @@
     margin-right: 2rem;
   }
  
-
+  #career-selection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    max-height: 600px;
+    overflow: hidden;
+  }
   nav{
     content: '';
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    position: absolute;
+    position: fixed;
     width:100%;
     margin:0;
-    padding:0;
+    padding: 0;
     height:10vh; 
     background: var(--nav);
     border-radius: 4px;
@@ -88,7 +94,7 @@ nav>div >a {
     max-width: 800px;
     margin: 3rem auto;
     padding-top: 10vh;
-    padding: 0 2rem;
+    padding: 2rem;
     text-align: center;
     justify-content:center;
     align-items:center;
@@ -424,10 +430,6 @@ background-color: var(--primary);
   text-align: left;
   padding: 1;
   color: black;
-}
-
-#payment-1 {
-
 }
 
 #payment-2 {
